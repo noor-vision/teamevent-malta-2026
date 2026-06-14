@@ -352,11 +352,16 @@ p {
 .hero-visual {
   position: relative;
   z-index: 1;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.25);
+  aspect-ratio: 16/10;
 }
 .hero-visual img {
   width: 100%;
-  border-radius: 20px;
-  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.25);
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
 .site-footer {
@@ -755,11 +760,13 @@ p {
   border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 8px 24px rgba(18, 29, 75, 0.08);
+  aspect-ratio: 16/10;
 }
 .day-image img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  display: block;
 }
 
 .day-details h3 {
@@ -988,7 +995,8 @@ p {
   }
   .day-image {
     order: -1;
-    max-height: 260px;
+    aspect-ratio: 16/9;
+    max-height: 320px;
   }
 }
 @media (max-width: 768px) {

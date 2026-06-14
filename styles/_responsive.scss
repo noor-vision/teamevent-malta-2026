@@ -27,7 +27,8 @@
 
   .day-image {
     order: -1;
-    max-height: 260px;
+    aspect-ratio: 16 / 9;
+    max-height: 320px;
   }
 }
 
