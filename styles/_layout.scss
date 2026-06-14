@@ -1,0 +1,333 @@
+// ============================================================
+// Layout: Header, Hero, Footer
+// ============================================================
+
+@use 'tokens' as *;
+@use 'mixins' as *;
+
+// Header & Navigation
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: $color-primary;
+  box-shadow: 0 2px 16px $color-shadow-strong;
+}
+
+.header-inner {
+  max-width: $max-width;
+  margin: 0 auto;
+  padding: 0 $space-lg;
+  height: $header-height;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: $space-lg;
+}
+
+.logo-link {
+  display: flex;
+  align-items: center;
+  gap: $space-sm;
+  color: $nv-off-white;
+  transition: color $transition-fast;
+
+  &:hover, &:focus {
+    color: $color-accent;
+    text-decoration: none;
+  }
+}
+
+.logo-img {
+  height: 44px;
+  width: auto;
+}
+
+.logo-text {
+  font-family: $font-header;
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.header-controls {
+  display: flex;
+  align-items: center;
+  gap: $space-md;
+  margin-left: auto;
+}
+
+.lang-switch {
+  display: flex;
+  align-items: center;
+  gap: $space-xs;
+  font-size: 0.875rem;
+  font-weight: 600;
+
+  a, span {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 2rem;
+    height: 2rem;
+    padding: 0 $space-sm;
+    border-radius: 8px;
+  }
+
+  a {
+    color: rgba($nv-off-white, 0.75);
+    background: transparent;
+    transition: background $transition-fast, color $transition-fast;
+
+    &:hover, &:focus {
+      color: $color-accent;
+      background: rgba(255, 255, 255, 0.1);
+      text-decoration: none;
+    }
+  }
+
+  .lang-current {
+    color: $color-accent;
+    background: rgba($color-accent, 0.15);
+  }
+}
+
+.main-nav {
+  display: flex;
+  align-items: center;
+}
+
+.nav-list {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: $space-xs;
+}
+
+.nav-link {
+  display: inline-flex;
+  align-items: center;
+  gap: $space-xs;
+  padding: $space-sm $space-md;
+  color: $nv-off-white;
+  font-weight: 500;
+  font-size: 0.95rem;
+  border-radius: 8px;
+  transition: background $transition-fast, color $transition-fast;
+
+  &:hover, &:focus {
+    background: rgba(255, 255, 255, 0.1);
+    color: $color-accent;
+    text-decoration: none;
+  }
+
+  &.active {
+    background: rgba(255, 255, 255, 0.15);
+    color: $color-accent;
+  }
+}
+
+.nav-icon {
+  width: 18px;
+  height: 18px;
+}
+
+// Mobile Menu Toggle
+.menu-toggle {
+  display: none;
+  background: transparent;
+  border: 0;
+  color: $nv-off-white;
+  cursor: pointer;
+  padding: $space-sm;
+  border-radius: 8px;
+  transition: background $transition-fast;
+
+  &:hover, &:focus {
+    background: rgba(255, 255, 255, 0.1);
+  }
+
+  svg {
+    width: 28px;
+    height: 28px;
+  }
+}
+
+// Hero Section
+.hero {
+  position: relative;
+  background: linear-gradient(135deg, $nv-navy-dark 0%, $nv-navy-mid 60%, $nv-navy-light 100%);
+  color: $nv-off-white;
+  padding: $space-3xl $space-lg;
+  overflow: hidden;
+
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at 80% 20%, $color-accent 0%, transparent 35%),
+                radial-gradient(circle at 20% 80%, $nv-sand 0%, transparent 25%);
+    opacity: 0.12;
+    pointer-events: none;
+  }
+}
+
+.hero-inner {
+  position: relative;
+  max-width: $max-width;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: $space-2xl;
+  align-items: center;
+}
+
+.hero-content {
+  z-index: 1;
+}
+
+.hero-label {
+  display: inline-flex;
+  align-items: center;
+  gap: $space-sm;
+  background: rgba($color-accent, 0.15);
+  color: $color-accent;
+  padding: $space-sm $space-md;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: $space-lg;
+  border: 1px solid rgba($color-accent, 0.25);
+
+  svg {
+    width: 18px;
+    height: 18px;
+    flex-shrink: 0;
+  }
+}
+
+.hero h1 {
+  color: $nv-off-white;
+  margin-bottom: $space-md;
+
+  span {
+    color: $color-accent;
+  }
+}
+
+.hero-subtitle {
+  font-size: clamp(1.25rem, 2.5vw, 1.75rem);
+  color: rgba($nv-off-white, 0.85);
+  margin-bottom: $space-lg;
+  font-weight: 500;
+}
+
+.hero-description {
+  color: rgba($nv-off-white, 0.75);
+  font-size: 1.05rem;
+  max-width: 55ch;
+  margin-bottom: $space-md;
+}
+
+.hero-location {
+  display: inline-flex;
+  align-items: center;
+  gap: $space-sm;
+  color: $color-accent;
+  font-weight: 600;
+  margin-bottom: $space-xl;
+
+  a {
+    color: $color-accent;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+
+    &:hover, &:focus {
+      color: $nv-off-white;
+    }
+  }
+
+  svg {
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+  }
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: $space-md;
+}
+
+.hero-visual {
+  position: relative;
+  z-index: 1;
+
+  img {
+    width: 100%;
+    border-radius: $border-radius-lg;
+    box-shadow: 0 24px 60px rgba(0, 0, 0, 0.25);
+  }
+}
+
+// Footer
+.site-footer {
+  background: $color-primary;
+  color: $nv-off-white;
+  padding: $space-2xl $space-lg $space-xl;
+}
+
+.footer-inner {
+  max-width: $max-width;
+  margin: 0 auto;
+  display: grid;
+  gap: $space-xl;
+}
+
+.footer-message {
+  text-align: center;
+  max-width: 70ch;
+  margin: 0 auto;
+
+  h2 {
+    color: $color-accent;
+    margin-bottom: $space-md;
+  }
+
+  p {
+    font-size: 1.1rem;
+    color: rgba($nv-off-white, 0.85);
+    margin-bottom: $space-md;
+  }
+}
+
+.footer-claim {
+  font-family: $font-header;
+  font-size: 1.25rem;
+  color: $color-accent;
+  font-weight: 600;
+}
+
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: $space-xl;
+  border-top: 1px solid rgba($nv-off-white, 0.15);
+  flex-wrap: wrap;
+  gap: $space-md;
+}
+
+.footer-logo {
+  height: 36px;
+  width: auto;
+}
+
+.footer-copyright {
+  font-size: 0.875rem;
+  color: rgba($nv-off-white, 0.6);
+}

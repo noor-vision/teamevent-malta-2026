@@ -1,0 +1,14 @@
+{
+  "name": "teamevent-malta-2026",
+  "version": "1.0.0",
+  "description": "Noor Vision GmbH Malta Onsite 2026 Team Event Website",
+  "private": true,
+  "scripts": {
+    "build": "sass styles/styles.scss styles/styles.css --style=expanded --source-map",
+    "watch": "sass styles/styles.scss styles/styles.css --style=expanded --source-map --watch",
+    "serve": "python -m http.server 8000"
+  },
+  "devDependencies": {
+    "sass": "^1.77.0"
+  }
+}

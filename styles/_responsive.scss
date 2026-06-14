@@ -1,0 +1,138 @@
+// ============================================================
+// Responsive Adjustments
+// ============================================================
+
+@use 'tokens' as *;
+@use 'mixins' as *;
+
+@include respond-to(tablet) {
+  .hero-inner {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero-description {
+    max-width: 60ch;
+  }
+
+  .day-content {
+    grid-template-columns: 1fr;
+  }
+
+  .day-image {
+    order: -1;
+    max-height: 260px;
+  }
+}
+
+@include respond-to(mobile) {
+  :root {
+    --header-height: 72px;
+  }
+
+  .main-nav {
+    position: absolute;
+    top: $header-height;
+    left: 0;
+    right: 0;
+    background: $color-primary;
+    padding: $space-md;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    transform: translateY(-150%);
+    visibility: hidden;
+
+    &.open {
+      transform: translateY(0);
+      visibility: visible;
+    }
+  }
+
+  .nav-list {
+    flex-direction: column;
+    gap: $space-xs;
+  }
+
+  .menu-toggle {
+    @include grid-center;
+  }
+
+  .section {
+    padding: $space-xl $space-md;
+  }
+
+  .day-card {
+    margin-left: 0;
+    grid-template-columns: 1fr;
+    gap: $space-lg;
+
+    &::before {
+      display: none;
+    }
+  }
+
+  .day-marker {
+    flex-direction: row;
+    align-items: baseline;
+    gap: $space-sm;
+  }
+
+  .day-name {
+    font-size: 0.875rem;
+  }
+
+  .day-number {
+    font-size: 2rem;
+  }
+
+  .timeline::before {
+    display: none;
+  }
+
+  .info-section,
+  .dining-note {
+    padding: $space-xl $space-lg;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+@include respond-to(small) {
+  .hero {
+    padding: $space-2xl $space-md;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .btn {
+    width: 100%;
+  }
+
+  .stats-grid,
+  .info-grid,
+  .restaurant-grid,
+  .packing-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .activity-item {
+    grid-template-columns: 1fr;
+    gap: $space-xs;
+  }
+
+  .print-actions {
+    bottom: $space-md;
+    right: $space-md;
+  }
+}

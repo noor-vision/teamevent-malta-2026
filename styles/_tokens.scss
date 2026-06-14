@@ -1,0 +1,63 @@
+// ============================================================
+// Noor Vision GmbH - Event Website Design Tokens
+// Malta Onsite 2026
+// Brand colors extracted from the Noor Vision Branding Guide
+// ============================================================
+
+// Brand Colors
+$nv-navy-dark: #121D4B;
+$nv-navy-mid: #1E317D;
+$nv-navy-light: #263E9F;
+$nv-off-white: #F2F2F2;
+$nv-light-gray: #F4F4F4;
+$nv-accent-teal: #2EF2E0;
+
+// Mediterranean Theme Accents
+$nv-sand: #F5E6C8;
+$nv-sand-dark: #E0C9A0;
+$nv-sun: #FFD54F;
+$nv-sea: #4FA8D8;
+$nv-sky: #7EC8E3;
+
+// Functional Colors
+$color-bg: $nv-light-gray;
+$color-surface: #FFFFFF;
+$color-text: $nv-navy-dark;
+$color-text-muted: #4A5568;
+$color-primary: $nv-navy-dark;
+$color-secondary: $nv-navy-mid;
+$color-accent: $nv-accent-teal;
+$color-accent-dark: #1DC8B8;
+$color-border: rgba($nv-navy-dark, 0.12);
+$color-shadow: rgba($nv-navy-dark, 0.08);
+$color-shadow-strong: rgba($nv-navy-dark, 0.16);
+
+// Typography
+$font-header: 'Syne', 'Montserrat', 'Segoe UI', system-ui, sans-serif;
+$font-body: 'Montserrat', 'Segoe UI', system-ui, sans-serif;
+
+// Spacing Scale
+$space-xs: 0.25rem;
+$space-sm: 0.5rem;
+$space-md: 1rem;
+$space-lg: 1.5rem;
+$space-xl: 2.5rem;
+$space-2xl: 4rem;
+$space-3xl: 6rem;
+
+// Layout
+$max-width: 1200px;
+$header-height: 80px;
+$border-radius: 12px;
+$border-radius-lg: 20px;
+
+// Transitions
+$transition-fast: 150ms ease;
+$transition-base: 250ms ease;
+
+// Animation Tokens
+$ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+$ease-in-out-sine: cubic-bezier(0.37, 0, 0.63, 1);
+$duration-reveal: 700ms;
+$duration-hover: 300ms;
+$stagger-delay: 100ms;

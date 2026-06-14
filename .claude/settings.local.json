@@ -1,0 +1,27 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:github.com)",
+      "Bash(git clone *)",
+      "Bash(\\\\.html\")",
+      "Bash(.html\" 2>&1)",
+      "Bash(Get-ChildItem *)",
+      "Bash(Select-Object Name, FullName)",
+      "Bash(Select-Object Name, LastWriteTime, Length)",
+      "Skill(deep-research)",
+      "Bash(python *)",
+      "PowerShell($content = Get-Content \"D:\\\\Marketpost\\\\Noor Vision\\\\Team Events\\\\Websites\\\\teamevent-malta-2026\\\\details\\\\noor-vision-logo.svg\" -Raw; $colors = \\($content | Select-String '#[0-9A-Fa-f]{3,6}' | ForEach-Object { $_.Matches.Value }\\) | Sort-Object -Unique; Write-Output \"HEX colors found in logo:\"; Write-Output $\\($colors -join [System.String]::NewLine\\))",
+      "Bash(Select-Object FullName, Length)",
+      "Bash(Format-Table -AutoSize)",
+      "PowerShell($pdf = Get-Item \"D:\\\\Marketpost\\\\Noor Vision\\\\Team Events\\\\Websites\\\\teamevent-malta-2026\\\\details\\\\Noor Vision Branding Guidepdf.pdf\"; Write-Output \"`n--- NOOR VISION BRANDING GUIDE ---`nFile: $\\($pdf.Name\\)`nSize: $\\([int]$pdf.Length\\) bytes \\($\\(\\([int]\\($pdf.Length\\)/1MB\\).ToString\\('N2'\\) + ' MB'\\)\\)`;nPath: $\\($pdf.FullName\\)\")",
+      "Bash(Select-String -Pattern 'malta')",
+      "PowerShell(New-Item *)",
+      "Bash(Select-Object -First 5)",
+      "Bash(dir -Recurse .)",
+      "Bash(Select-Object First 50)",
+      "Bash(mkdir \"D:\\\\Marketpost\\\\Noor Vision\\\\Team Events\\\\Websites\\\\teamevent-malta-2026\" -p)",
+      "Read(//d/Marketpost/Noor vision/team events/web sites/**)",
+      "Bash(mkdir components *)"
+    ]
+  }
+}

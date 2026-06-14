@@ -1,0 +1,129 @@
+// ============================================================
+// Print Styles
+// ============================================================
+
+@use 'tokens' as *;
+
+@media print {
+  :root {
+    --color-bg: #FFFFFF;
+    --color-surface: #FFFFFF;
+    --color-text: #000000;
+  }
+
+  html {
+    scroll-behavior: auto;
+  }
+
+  body {
+    background: #FFFFFF;
+    color: #000000;
+    font-size: 11pt;
+  }
+
+  // Reset any GSAP inline transforms/opacity so content stays visible
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
+
+  body * {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  .site-header,
+  .menu-toggle,
+  .print-actions,
+  .hero-actions {
+    display: none !important;
+  }
+
+  .hero {
+    background: #FFFFFF;
+    color: #000000;
+    padding: 1rem 0;
+    text-align: center;
+  }
+
+  .hero h1,
+  .hero h1 span,
+  .hero-subtitle,
+  .hero-description {
+    color: #000000;
+  }
+
+  .hero-visual {
+    display: none;
+  }
+
+  .section {
+    padding: 1.5rem 0;
+    page-break-inside: avoid;
+  }
+
+  .stat-card,
+  .info-section,
+  .day-card,
+  .restaurant-card,
+  .packing-item,
+  .dining-note {
+    box-shadow: none;
+    border: 1px solid #CCCCCC;
+    background: #FFFFFF;
+    page-break-inside: avoid;
+  }
+
+  .dining-note {
+    background: #FFFFFF;
+    color: #000000;
+
+    h3, .deadline {
+      color: #000000;
+    }
+  }
+
+  .section-icon {
+    background: #FFFFFF;
+    color: #000000;
+    border: 1px solid #000000;
+  }
+
+  .site-footer {
+    background: #FFFFFF;
+    color: #000000;
+    padding: 1rem 0;
+  }
+
+  .footer-message h2,
+  .footer-claim {
+    color: #000000;
+  }
+
+  .footer-logo {
+    filter: grayscale(100%);
+  }
+
+  .footer-copyright {
+    color: #000000;
+  }
+
+  a {
+    color: #000000;
+    text-decoration: underline;
+  }
+
+  .day-card::before {
+    box-shadow: none;
+    border-color: #000000;
+  }
+
+  .timeline::before {
+    background: #000000;
+  }
+
+  // Show full URLs for links in print
+  a[href]::after {
+    content: none;
+  }
+}
