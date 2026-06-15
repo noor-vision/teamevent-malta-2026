@@ -37,6 +37,14 @@
     --header-height: 72px;
   }
 
+  .header-inner {
+    gap: $space-sm;
+  }
+
+  .header-search {
+    display: none;
+  }
+
   .main-nav {
     position: absolute;
     top: $header-height;
@@ -123,6 +131,7 @@
   .stats-grid,
   .info-grid,
   .restaurant-grid,
+  .location-grid,
   .packing-grid {
     grid-template-columns: 1fr;
   }

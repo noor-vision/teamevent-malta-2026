@@ -4,15 +4,15 @@ A scalable, responsive, and visually polished event website for the Noor Vision 
 
 ## Features
 
-- **Static HTML structure** — all content lives directly in `index.html`
-- **SCSS architecture** — modular partials for tokens, mixins, layout, components, responsive, and print styles
-- **GSAP animations** — scroll-triggered reveals, hero entrance, hover micro-interactions on clickable elements, mobile menu
-- **Tabler Icons** — lightweight, consistent SVG icons inlined via an SVG sprite
+- **Static HTML structure** - all content lives directly in `index.html`
+- **SCSS architecture** - modular partials for tokens, mixins, layout, components, responsive, and print styles
+- **GSAP animations** - scroll-triggered reveals, hero entrance, hover micro-interactions on clickable elements, mobile menu
+- **Tabler Icons** - lightweight, consistent SVG icons inlined via an SVG sprite
 - **Brand-compliant styling** using colors from the Noor Vision Branding Guide
 - **Responsive design** for mobile, tablet, and desktop
 - **Smooth scroll navigation** with active-section highlighting
 - **Print-friendly stylesheet** for easy PDF generation
-- **Accessible** — semantic HTML, skip links, focus states, keyboard navigation, `prefers-reduced-motion` support
+- **Accessible** - semantic HTML, skip links, focus states, keyboard navigation, `prefers-reduced-motion` support
 
 ## Brand Colors
 
@@ -39,7 +39,7 @@ Typography: **Syne** (headers), **Montserrat** (body).
 │   ├── styles.scss         # SCSS entry point
 │   ├── _tokens.scss        # Design tokens
 │   ├── _mixins.scss        # Sass mixins
-│   ├── _animations.scss    # Reserved for CSS animations (currently empty — GSAP handles motion)
+│   ├── _animations.scss    # Reserved for CSS animations (currently empty - GSAP handles motion)
 │   ├── _base.scss          # Reset & typography
 │   ├── _layout.scss        # Header, hero, footer
 │   ├── _components.scss    # Buttons, cards, sections
@@ -111,9 +111,9 @@ Drop new images into `assets/images/` and update the `src` attributes in `index.
 
 Open the SCSS partials in `styles/`:
 
-- `_tokens.scss` — brand colors, Mediterranean accents, fonts, spacing, border radius
-- `_components.scss` — cards, buttons, sections
-- `_layout.scss` — header, hero, footer
+- `_tokens.scss` - brand colors, Mediterranean accents, fonts, spacing, border radius
+- `_components.scss` - cards, buttons, sections
+- `_layout.scss` - header, hero, footer
 
 After editing, run `npm run build` to regenerate `styles/styles.css`.
 

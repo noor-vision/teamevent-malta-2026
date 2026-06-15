@@ -13,6 +13,7 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: calc(80px + 1rem);
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -153,42 +154,86 @@ p {
   letter-spacing: -0.02em;
 }
 
-.header-controls {
+.header-start,
+.header-end {
   display: flex;
   align-items: center;
   gap: 1rem;
-  margin-left: auto;
 }
 
 .lang-switch {
   display: flex;
   align-items: center;
   gap: 0.25rem;
-  font-size: 0.875rem;
+  font-size: 0.85rem;
   font-weight: 600;
+  line-height: 1;
 }
 .lang-switch a, .lang-switch span {
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  gap: 0.25rem;
   min-width: 2rem;
   height: 2rem;
   padding: 0 0.5rem;
   border-radius: 8px;
 }
+.lang-switch .lang-flag {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 14px;
+  border-radius: 2px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.lang-switch .lang-flag svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
 .lang-switch a {
   color: rgba(242, 242, 242, 0.75);
   background: transparent;
-  transition: background 150ms ease, color 150ms ease;
+  transition: background 150ms ease, transform 150ms ease;
 }
 .lang-switch a:hover, .lang-switch a:focus {
-  color: #2EF2E0;
-  background: rgba(255, 255, 255, 0.1);
+  color: #F2F2F2;
+  background: rgba(255, 255, 255, 0.12);
+  transform: scale(1.1);
   text-decoration: none;
 }
 .lang-switch .lang-current {
-  color: #2EF2E0;
+  color: #F2F2F2;
   background: rgba(46, 242, 224, 0.15);
+  box-shadow: inset 0 0 0 1px rgba(46, 242, 224, 0.35);
+}
+
+.header-search {
+  width: 180px;
+  height: 2.5rem;
+  padding: 0.5rem 1rem;
+  background: rgba(242, 242, 242, 0.1);
+  border: 1px solid rgba(242, 242, 242, 0.2);
+  border-radius: 8px;
+  color: #F2F2F2;
+  font-size: 0.9rem;
+  transition: background 150ms ease, border-color 150ms ease, width 150ms ease;
+}
+.header-search::placeholder {
+  color: rgba(242, 242, 242, 0.6);
+}
+.header-search:hover {
+  background: rgba(242, 242, 242, 0.14);
+  border-color: rgba(242, 242, 242, 0.35);
+}
+.header-search:focus {
+  outline: none;
+  background: rgba(242, 242, 242, 0.18);
+  border-color: #2EF2E0;
+  width: 220px;
 }
 
 .main-nav {
@@ -464,6 +509,7 @@ p {
 }
 .btn-primary:hover, .btn-primary:focus {
   background: #1DC8B8;
+  color: #F2F2F2;
   box-shadow: 0 8px 24px rgba(46, 242, 224, 0.3);
 }
 
@@ -473,8 +519,9 @@ p {
   border-color: rgba(242, 242, 242, 0.4);
 }
 .btn-secondary:hover, .btn-secondary:focus {
-  background: rgba(242, 242, 242, 0.08);
+  background: rgba(242, 242, 242, 0.12);
   border-color: #F2F2F2;
+  color: #F2F2F2;
 }
 
 .map-link {
@@ -883,13 +930,19 @@ p {
   font-weight: 600;
 }
 
-.restaurant-grid {
+.important-locations {
+  margin-top: 4rem;
+}
+
+.restaurant-grid,
+.location-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   gap: 2.5rem;
 }
 
-.restaurant-card {
+.restaurant-card,
+.location-card {
   background: #FFFFFF;
   border-radius: 20px;
   overflow: hidden;
@@ -899,24 +952,28 @@ p {
   flex-direction: column;
   height: 100%;
 }
-.restaurant-card img {
+.restaurant-card img,
+.location-card img {
   width: 100%;
   height: 220px;
   object-fit: cover;
 }
 
-.restaurant-info {
+.restaurant-info,
+.location-info {
   padding: 1.5rem;
   flex: 1;
   display: flex;
   flex-direction: column;
 }
-.restaurant-info .map-link {
+.restaurant-info .map-link,
+.location-info .map-link {
   margin-top: auto;
   padding-top: 1rem;
 }
 
-.restaurant-occasion {
+.restaurant-occasion,
+.location-type {
   font-size: 0.8rem;
   text-transform: uppercase;
   letter-spacing: 0.05em;
@@ -925,13 +982,15 @@ p {
   margin-bottom: 0.25rem;
 }
 
-.restaurant-name {
+.restaurant-name,
+.location-name {
   font-family: "Syne", "Montserrat", "Segoe UI", system-ui, sans-serif;
   font-size: 1.35rem;
   margin-bottom: 0.25rem;
 }
 
-.restaurant-cuisine {
+.restaurant-cuisine,
+.location-detail {
   color: #1E317D;
   font-weight: 500;
 }
@@ -943,12 +1002,16 @@ p {
 .packing-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  grid-auto-rows: 1fr;
   gap: 1rem;
 }
 
 .packing-item {
   display: flex;
-  align-items: flex-start;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
   gap: 1rem;
   padding: 1.5rem;
   background: #F2F2F2;
@@ -971,10 +1034,11 @@ p {
   height: 20px;
 }
 .packing-item p {
-  flex: 1;
   margin: 0;
+  width: 100%;
   font-weight: 500;
   color: #121D4B;
+  text-align: center;
 }
 
 @media (max-width: 992px) {
@@ -1002,6 +1066,12 @@ p {
 @media (max-width: 768px) {
   :root {
     --header-height: 72px;
+  }
+  .header-inner {
+    gap: 0.5rem;
+  }
+  .header-search {
+    display: none;
   }
   .main-nav {
     position: absolute;
@@ -1074,6 +1144,7 @@ p {
   .stats-grid,
   .info-grid,
   .restaurant-grid,
+  .location-grid,
   .packing-grid {
     grid-template-columns: 1fr;
   }
@@ -1137,6 +1208,7 @@ p {
   .info-section,
   .day-card,
   .restaurant-card,
+  .location-card,
   .packing-item,
   .dining-note {
     box-shadow: none;
@@ -1175,15 +1247,19 @@ p {
     color: #000000;
     text-decoration: underline;
   }
+  a[href^=http]::after {
+    content: " (" attr(href) ")";
+    display: inline;
+    font-size: 0.8em;
+    font-weight: 400;
+    word-break: break-all;
+  }
   .day-card::before {
     box-shadow: none;
     border-color: #000000;
   }
   .timeline::before {
     background: #000000;
-  }
-  a[href]::after {
-    content: none;
   }
 }
 

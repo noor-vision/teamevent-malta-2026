@@ -66,6 +66,7 @@
   .info-section,
   .day-card,
   .restaurant-card,
+  .location-card,
   .packing-item,
   .dining-note {
     box-shadow: none;
@@ -113,6 +114,15 @@
     text-decoration: underline;
   }
 
+  // Make external links actionable in print/PDF by showing their URLs
+  a[href^="http"]::after {
+    content: " (" attr(href) ")";
+    display: inline;
+    font-size: 0.8em;
+    font-weight: 400;
+    word-break: break-all;
+  }
+
   .day-card::before {
     box-shadow: none;
     border-color: #000000;
@@ -120,10 +130,5 @@
 
   .timeline::before {
     background: #000000;
-  }
-
-  // Show full URLs for links in print
-  a[href]::after {
-    content: none;
   }
 }

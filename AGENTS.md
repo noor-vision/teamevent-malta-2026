@@ -1,5 +1,5 @@
 <!-- From: d:\Marketpost\Noor Vision\Team Events\Websites\teamevent-malta-2026\AGENTS.md -->
-# AGENTS.md — Noor Vision Malta Onsite 2026 Team Event Website
+# AGENTS.md - Noor Vision Malta Onsite 2026 Team Event Website
 
 > This file is written for AI coding agents who need to understand and work on the project. The project documentation is in English, so this file is also written in English.
 
@@ -9,20 +9,20 @@
 
 This is a single-page, static event website for the **Noor Vision GmbH Malta Onsite 2026** team offsite. The page content is static markup in `index.html`, styled with SCSS, and enhanced with GSAP animations.
 
-- **Single-page static HTML** — all content lives in `index.html`.
-- **SCSS build step** — modular SCSS partials are compiled to `styles/styles.css` with Sass.
-- **GSAP animations** — scroll-triggered reveals, hero entrance, and hover micro-interactions.
-- **Inline SVG icon sprite** — icons are defined once in `index.html` and reused via `<use href="#icon-name">`.
+- **Single-page static HTML** - all content lives in `index.html`.
+- **SCSS build step** - modular SCSS partials are compiled to `styles/styles.css` with Sass.
+- **GSAP animations** - scroll-triggered reveals, hero entrance, and hover micro-interactions.
+- **Inline SVG icon sprite** - icons are defined once in `index.html` and reused via `<use href="#icon-name">`.
 - **Brand-compliant styling** using colors from the Noor Vision Branding Guide.
 
 ## Technology Stack
 
-- **HTML5** (`index.html`) — semantic page skeleton, accessibility landmarks, and inline SVG icon sprite.
-- **SCSS/CSS3** (`styles/styles.scss` + partials) — design tokens, responsive layout, print stylesheet, and reduced-motion support. Compiled to `styles/styles.css`.
-- **Vanilla JavaScript ES6+** (`script.js`) — mobile menu, smooth scroll, active-section nav highlighting, print button, and GSAP-driven animations.
-- **GSAP 3 + ScrollTrigger** — loaded from `cdnjs.cloudflare.com`.
-- **Google Fonts** — Syne (headers) and Montserrat (body), loaded from `fonts.googleapis.com`.
-- **Assets** — custom SVG icons in an inline sprite, raster images in `assets/images/`, and the Noor Vision logo in `assets/`.
+- **HTML5** (`index.html`) - semantic page skeleton, accessibility landmarks, and inline SVG icon sprite.
+- **SCSS/CSS3** (`styles/styles.scss` + partials) - design tokens, responsive layout, print stylesheet, and reduced-motion support. Compiled to `styles/styles.css`.
+- **Vanilla JavaScript ES6+** (`script.js`) - mobile menu, smooth scroll, active-section nav highlighting, print button, and GSAP-driven animations.
+- **GSAP 3 + ScrollTrigger** - loaded from `cdnjs.cloudflare.com`.
+- **Google Fonts** - Syne (headers) and Montserrat (body), loaded from `fonts.googleapis.com`.
+- **Assets** - custom SVG icons in an inline sprite, raster images in `assets/images/`, and the Noor Vision logo in `assets/`.
 
 ## Project Structure
 
@@ -35,7 +35,7 @@ This is a single-page, static event website for the **Noor Vision GmbH Malta Ons
 │   ├── styles.scss         # SCSS entry point
 │   ├── _tokens.scss        # Design tokens (colors, fonts, spacing)
 │   ├── _mixins.scss        # Sass mixins and breakpoint helpers
-│   ├── _animations.scss    # Reserved for CSS animations (currently empty — GSAP handles motion)
+│   ├── _animations.scss    # Reserved for CSS animations (currently empty - GSAP handles motion)
 │   ├── _base.scss          # Reset & typography
 │   ├── _layout.scss        # Header, hero, footer
 │   ├── _components.scss    # Buttons, cards, sections
@@ -125,13 +125,13 @@ There are **no automated tests**. Manual testing checklist:
 
 1. Run `npm run build` and confirm `styles/styles.css` is regenerated without errors.
 2. Open `index.html` directly (or via `npm run serve`) in Chrome, Edge, Firefox, and Safari.
-3. Verify all sections render: Hero, Overview, Logistics, Itinerary, Dining, Packing, Footer.
+3. Verify all sections render: Hero, Overview, Logistics (including Important Locations cards), Packing, Planning, Dining, Footer.
 3a. Open `index-de.html` and verify all sections render in German.
 4. Test the mobile menu at narrow viewports.
 5. Click each nav link and confirm smooth scrolling and active-state highlighting.
 6. Click external map links and confirm they open in a new tab with `rel="noopener noreferrer"`.
 7. Click the floating **Print / Save PDF** button and verify the print stylesheet produces a clean output.
-8. Test reduced-motion preference if possible (`prefers-reduced-motion: reduce`) — animations should be disabled.
+8. Test reduced-motion preference if possible (`prefers-reduced-motion: reduce`) - animations should be disabled.
 9. Optional: run HTML/CSS/JS validators.
 
 ## Security Considerations

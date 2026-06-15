@@ -91,31 +91,52 @@
   <!-- Header / Navigation -->
   <header class="site-header" role="banner">
     <div class="header-inner">
-      <a href="#" class="logo-link" aria-label="Noor Vision - Malta Onsite 2026, back to top">
-        <img src="assets/logo.png" alt="Noor Vision GmbH Logo" class="logo-img" width="103" height="46">
-        <span class="logo-text">Malta 2026</span>
-      </a>
-
-      <div class="header-controls">
-        <div class="lang-switch" aria-label="Change language">
-          <span class="lang-current" aria-current="page">EN</span>
-          <a href="index-de.html" lang="de">DE</a>
-        </div>
-
-        <button class="menu-toggle" id="menu-toggle" aria-expanded="false" aria-controls="main-nav" aria-label="Toggle navigation menu">
-          <svg aria-hidden="true"><use href="#icon-menu"></use></svg>
-        </button>
+      <div class="header-start">
+        <a href="#" class="logo-link" aria-label="Noor Vision - Malta Onsite 2026, back to top">
+          <img src="assets/logo.png" alt="Noor Vision GmbH Logo" class="logo-img" width="103" height="46">
+        </a>
       </div>
 
       <nav class="main-nav" id="main-nav" role="navigation" aria-label="Main navigation">
         <ul class="nav-list">
           <li><a href="#overview" class="nav-link" data-section="overview">Overview</a></li>
           <li><a href="#logistics" class="nav-link" data-section="logistics">Logistics</a></li>
-          <li><a href="#itinerary" class="nav-link" data-section="itinerary">Itinerary</a></li>
-          <li><a href="#dining" class="nav-link" data-section="dining">Dining</a></li>
           <li><a href="#packing" class="nav-link" data-section="packing">Packing</a></li>
+          <li><a href="#itinerary" class="nav-link" data-section="itinerary">Planning</a></li>
+          <li><a href="#dining" class="nav-link" data-section="dining">Dining</a></li>
         </ul>
       </nav>
+
+      <div class="header-end">
+        <div class="lang-switch" aria-label="Change language">
+          <span class="lang-current" aria-current="page" title="English">
+            <span class="lang-flag" aria-hidden="true">
+              <svg viewBox="0 0 60 30" width="20" height="14" aria-hidden="true" focusable="false">
+                <rect width="60" height="30" fill="#012169"/>
+                <path d="M0,0 L60,30 M60,0 L0,30" stroke="#fff" stroke-width="6"/>
+                <path d="M0,0 L60,30 M60,0 L0,30" stroke="#C8102E" stroke-width="4"/>
+                <path d="M30,0 V30 M0,15 H60" stroke="#fff" stroke-width="10"/>
+                <path d="M30,0 V30 M0,15 H60" stroke="#C8102E" stroke-width="6"/>
+              </svg>
+            </span>
+            <span class="lang-label">EN</span>
+          </span>
+          <a href="index-de.html" lang="de" title="Deutsch">
+            <span class="lang-flag" aria-hidden="true">
+              <svg viewBox="0 0 60 30" width="20" height="14" aria-hidden="true" focusable="false">
+                <rect width="60" height="10" y="0" fill="#000"/>
+                <rect width="60" height="10" y="10" fill="#DD0000"/>
+                <rect width="60" height="10" y="20" fill="#FFCE00"/>
+              </svg>
+            </span>
+            <span class="lang-label">DE</span>
+          </a>
+        </div>
+        <input type="search" id="site-search" class="header-search" placeholder="Search..." aria-label="Search this page">
+        <button class="menu-toggle" id="menu-toggle" aria-expanded="false" aria-controls="main-nav" aria-label="Toggle navigation menu">
+          <svg aria-hidden="true"><use href="#icon-menu"></use></svg>
+        </button>
+      </div>
     </div>
   </header>
 
@@ -134,7 +155,7 @@
             We are incredibly excited to announce that the next Noor Vision GmbH Corporate Team Event is taking us straight to the heart of the Mediterranean. We are heading to Malta! This trip is designed to celebrate our hard work, align on our upcoming goals, and most importantly, spend some quality time together as a team.
           </p>
           <div class="hero-actions">
-            <a href="#itinerary" class="btn btn-primary">View Itinerary</a>
+            <a href="#itinerary" class="btn btn-primary">View planning</a>
             <a href="#overview" class="btn btn-secondary">Event Details</a>
           </div>
         </div>
@@ -168,22 +189,11 @@
             <div class="icon-wrap" aria-hidden="true">
               <svg aria-hidden="true"><use href="#icon-building"></use></svg>
             </div>
-            <div class="stat-label">Location</div>
+            <div class="stat-label">Hotel</div>
             <div class="stat-value">St. Julian's, Malta</div>
-            <a href="https://www.google.com/maps/search/?api=1&query=St+Julian's,+Malta" target="_blank" rel="noopener noreferrer" class="map-link">
+            <a href="https://www.google.com/maps/place/St+Julian's,+Malta/@35.9199225,14.4877119,14z" target="_blank" rel="noopener noreferrer" class="map-link">
               <svg aria-hidden="true"><use href="#icon-map-pin"></use></svg>
-              <span>View Location on Google Maps</span>
-            </a>
-          </article>
-          <article class="stat-card">
-            <div class="icon-wrap" aria-hidden="true">
-              <svg aria-hidden="true"><use href="#icon-building"></use></svg>
-            </div>
-            <div class="stat-label">Basecamp</div>
-            <div class="stat-value">be.Hotel St. Julian's</div>
-            <a href="https://www.google.com/maps/search/?api=1&query=be.HOTEL+St+Julian's+Malta" target="_blank" rel="noopener noreferrer" class="map-link">
-              <svg aria-hidden="true"><use href="#icon-map-pin"></use></svg>
-              <span>Location Hotel</span>
+              <span>St. Julian's, Malta</span>
             </a>
           </article>
           <article class="stat-card">
@@ -227,9 +237,9 @@
               <div class="info-content">
                 <h3>Arrival Day</h3>
                 <p>We'll be taking an Uber from Malta International Airport to the hotel on 17th June. Rooms will be ready from 15:00. Feel free to drop your bags, explore the area, or head straight to the rooftop pool!</p>
-                <a href="https://www.google.com/maps/search/?api=1&query=Malta+International+Airport" target="_blank" rel="noopener noreferrer" class="map-link">
+                <a href="https://www.google.com/maps/place/Malta+International+Airport/@35.8491987,14.4953109,17z" target="_blank" rel="noopener noreferrer" class="map-link">
                   <svg aria-hidden="true"><use href="#icon-map-pin"></use></svg>
-                  <span>Hotel</span>
+                  <span>Malta International Airport</span>
                 </a>
               </div>
             </article>
@@ -240,284 +250,73 @@
               <div class="info-content">
                 <h3>Departure</h3>
                 <p>On Saturday, 20th June, a private transfer will take us back to Malta International Airport for return flights to Germany.</p>
-                <a href="https://www.google.com/maps/search/?api=1&query=Malta+International+Airport" target="_blank" rel="noopener noreferrer" class="map-link">
+                <a href="https://www.google.com/maps/place/Malta+International+Airport/@35.8491987,14.4953109,17z" target="_blank" rel="noopener noreferrer" class="map-link">
                   <svg aria-hidden="true"><use href="#icon-map-pin"></use></svg>
-                  <span>View Departure on Google Maps</span>
+                  <span>Malta International Airport</span>
                 </a>
               </div>
             </article>
           </div>
         </div>
-      </div>
-    </section>
 
-    <!-- Itinerary Section -->
-    <section class="section itinerary" id="itinerary" aria-labelledby="itinerary-title">
-      <div class="section-inner">
-        <header class="section-header">
-          <div class="section-icon" aria-hidden="true">
-            <svg aria-hidden="true"><use href="#icon-calendar"></use></svg>
+        <!-- Important Locations -->
+        <div class="important-locations">
+          <header class="section-header">
+            <div class="section-icon" aria-hidden="true">
+              <svg aria-hidden="true"><use href="#icon-building"></use></svg>
+            </div>
+            <div>
+              <h3 class="section-title" id="important-locations-title">Important Locations</h3>
+              <p class="section-lead">Key venues for the offsite.</p>
+            </div>
+          </header>
+
+          <div class="location-grid">
+            <article class="location-card">
+              <div class="location-info">
+                <p class="location-type">Hotel</p>
+                <h4 class="location-name">be.Hotel St. Julian's</h4>
+                <p class="location-detail">Our basecamp in St. George's Bay.</p>
+                <a href="https://www.google.com/maps/place/be.HOTEL,+St+Julian's,+Malta/@35.9247668,14.4875549,17z" target="_blank" rel="noopener noreferrer" class="map-link">
+                  <svg aria-hidden="true"><use href="#icon-map-pin"></use></svg>
+                  <span>be.Hotel St. Julian's</span>
+                </a>
+              </div>
+            </article>
+            <article class="location-card">
+              <div class="location-info">
+                <p class="location-type">Meeting Room</p>
+                <h4 class="location-name">Hyatt Regency Malta</h4>
+                <p class="location-detail">St. George’s Bay, St. Julian’s, STJ 3311, Malta.</p>
+                <a href="https://www.google.com/maps/place/Hyatt+Regency+Malta,+St+Julian's,+Malta/@35.9239595,14.4874647,17z" target="_blank" rel="noopener noreferrer" class="map-link">
+                  <svg aria-hidden="true"><use href="#icon-map-pin"></use></svg>
+                  <span>Hyatt Regency Malta</span>
+                </a>
+              </div>
+            </article>
+            <article class="location-card">
+              <div class="location-info">
+                <p class="location-type">Friday Meeting Point</p>
+                <h4 class="location-name">Marina Di Valletta</h4>
+                <p class="location-detail">Triq San Maison, Pietà, Malta.</p>
+                <a href="https://maps.app.goo.gl/wNcFykvkcRwYCPru5" target="_blank" rel="noopener noreferrer" class="map-link">
+                  <svg aria-hidden="true"><use href="#icon-map-pin"></use></svg>
+                  <span>Marina Di Valletta</span>
+                </a>
+              </div>
+            </article>
+            <article class="location-card">
+              <div class="location-info">
+                <p class="location-type">Airport</p>
+                <h4 class="location-name">Malta International Airport</h4>
+                <p class="location-detail">Arrival and departure point.</p>
+                <a href="https://www.google.com/maps/place/Malta+International+Airport/@35.8491987,14.4953109,17z" target="_blank" rel="noopener noreferrer" class="map-link">
+                  <svg aria-hidden="true"><use href="#icon-map-pin"></use></svg>
+                  <span>Malta International Airport</span>
+                </a>
+              </div>
+            </article>
           </div>
-          <div>
-            <h2 class="section-title" id="itinerary-title">Our Itinerary</h2>
-            <p class="section-lead">Four days of strategy, sun, and team bonding.</p>
-          </div>
-        </header>
-        <div class="timeline">
-          <article class="day-card" id="day-1">
-            <div class="day-marker">
-              <span class="day-name">Wednesday</span>
-              <span class="day-number">1</span>
-              <span class="day-date">17th June</span>
-            </div>
-            <div class="day-content">
-              <div class="day-image">
-                <img src="assets/images/arrivals-hall.jpg" alt="Airport arrivals hallway with travelers" width="800" height="500" loading="lazy">
-              </div>
-              <div class="day-details">
-                <span class="day-theme">Arrival & Welcome Night</span>
-                <h3>Wednesday, 17th June</h3>
-                <p class="dress-code">
-                  <svg aria-hidden="true"><use href="#icon-shirt"></use></svg>
-                  <span><strong>Dress code:</strong> Casual / Relaxed</span>
-                </p>
-                <ul class="activity-list">
-                  <li class="activity-item">
-                    <span class="activity-time">Daytime</span>
-                    <div class="activity-body">
-                      <div class="activity-title">Arrivals & Check-in</div>
-                      <p class="activity-desc">Arrivals, check-in, and settling into the hotel.</p>
-                      <a href="https://www.google.com/maps/search/?api=1&query=be.HOTEL+St+Julian's+Malta" target="_blank" rel="noopener noreferrer" class="map-link">
-                        <svg aria-hidden="true"><use href="#icon-map-pin"></use></svg>
-                        <span>Location Hotel</span>
-                      </a>
-                    </div>
-                  </li>
-                  <li class="activity-item">
-                    <span class="activity-time">20:30</span>
-                    <div class="activity-body">
-                      <div class="activity-title">Kickoff Dinner</div>
-                      <p class="activity-desc">Kuya Asian Restaurant - Thai & Japanese street food, just a 2-minute walk from the hotel.</p>
-                      <a href="https://www.google.com/maps/search/?api=1&query=Kuya+Asian+Pub+St+Julian's+Malta" target="_blank" rel="noopener noreferrer" class="map-link">
-                        <svg aria-hidden="true"><use href="#icon-map-pin"></use></svg>
-                        <span>View Kickoff Dinner on Google Maps</span>
-                      </a>
-                    </div>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </article>
-
-          <article class="day-card" id="day-2">
-            <div class="day-marker">
-              <span class="day-name">Thursday</span>
-              <span class="day-number">2</span>
-              <span class="day-date">18th June</span>
-            </div>
-            <div class="day-content">
-              <div class="day-image">
-                <img src="assets/images/malta-sunny.jpg" alt="Sunny view of Valletta, Malta" width="800" height="500" loading="lazy">
-              </div>
-              <div class="day-details">
-                <span class="day-theme">Workshop & Strategy Day</span>
-                <h3>Thursday, 18th June</h3>
-                <p class="dress-code">
-                  <svg aria-hidden="true"><use href="#icon-shirt"></use></svg>
-                  <span><strong>Dress code:</strong> Business Casual for meeting; Smart Casual for dinner</span>
-                </p>
-                <ul class="activity-list">
-                  <li class="activity-item">
-                    <span class="activity-time">Morning</span>
-                    <div class="activity-body">
-                      <div class="activity-title">Buffet Breakfast</div>
-                      <p class="activity-desc">Full buffet breakfast at Fornelli restaurant.</p>
-                      <a href="https://maps.app.goo.gl/FrXGrpGhkRNpsf7z9" target="_blank" rel="noopener noreferrer" class="map-link">
-                        <svg aria-hidden="true"><use href="#icon-map-pin"></use></svg>
-                        <span>Fornelli restaurant</span>
-                      </a>
-                    </div>
-                  </li>
-                  <li class="activity-item">
-                    <span class="activity-time">12:00 - 17:00</span>
-                    <div class="activity-body">
-                      <div class="activity-title">Noor Vision Team Workshop</div>
-                      <p class="activity-desc">Private Upper Deck conference space, includes lunch + coffee breaks.</p>
-                      <a href="https://www.google.com/maps/search/?api=1&query=be.HOTEL+St+Julian's+Malta" target="_blank" rel="noopener noreferrer" class="map-link">
-                        <svg aria-hidden="true"><use href="#icon-map-pin"></use></svg>
-                        <span>Location (Placeholder)</span>
-                      </a>
-                    </div>
-                  </li>
-                  <li class="activity-item">
-                    <span class="activity-time">20:00</span>
-                    <div class="activity-body">
-                      <div class="activity-title">Team Dinner</div>
-                      <p class="activity-desc">The Avenue Restaurant - Italian feast in the Portomaso marina area.</p>
-                      <a href="https://www.google.com/maps/search/?api=1&query=The+Avenue+Restaurant+Portomaso+Malta" target="_blank" rel="noopener noreferrer" class="map-link">
-                        <svg aria-hidden="true"><use href="#icon-map-pin"></use></svg>
-                        <span>Avenue Restaurant</span>
-                      </a>
-                    </div>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </article>
-
-          <article class="day-card" id="day-3">
-            <div class="day-marker">
-              <span class="day-name">Friday</span>
-              <span class="day-number">3</span>
-              <span class="day-date">19th June</span>
-            </div>
-            <div class="day-content">
-              <div class="day-image">
-                <img src="assets/images/catamaran-water.jpg" alt="White catamaran docked on calm water" width="800" height="500" loading="lazy">
-              </div>
-              <div class="day-details">
-                <span class="day-theme">Sun, Sea & Sailing</span>
-                <h3>Friday, 19th June</h3>
-                <p class="dress-code">
-                  <svg aria-hidden="true"><use href="#icon-shirt"></use></svg>
-                  <span><strong>Dress code:</strong> Swimwear, shorts, t-shirts, sun hat, sunscreen!</span>
-                </p>
-                <ul class="activity-list">
-                  <li class="activity-item">
-                    <span class="activity-time">Morning</span>
-                    <div class="activity-body">
-                      <div class="activity-title">Hotel Breakfast</div>
-                      <p class="activity-desc">Breakfast at the hotel before we set sail.</p>
-                      <a href="https://www.google.com/maps/search/?api=1&query=be.HOTEL+St+Julian's+Malta" target="_blank" rel="noopener noreferrer" class="map-link">
-                        <svg aria-hidden="true"><use href="#icon-map-pin"></use></svg>
-                        <span>Hotel</span>
-                      </a>
-                    </div>
-                  </li>
-                  <li class="activity-item">
-                    <span class="activity-time">Daytime</span>
-                    <div class="activity-body">
-                      <div class="activity-title">Private Catamaran Charter</div>
-                      <p class="activity-desc">Private yacht via Sail Malta! Blue Lagoon, swimming, snorkeling. Premium BBQ lunch (steak & fish) + open bar.</p>
-                      <a href="https://www.google.com/maps/search/?api=1&query=Blue+Lagoon+Comino+Malta" target="_blank" rel="noopener noreferrer" class="map-link">
-                        <svg aria-hidden="true"><use href="#icon-map-pin"></use></svg>
-                        <span>Location (Placeholder)</span>
-                      </a>
-                    </div>
-                  </li>
-                  <li class="activity-item">
-                    <span class="activity-time">Evening</span>
-                    <div class="activity-body">
-                      <div class="activity-title">Free Evening</div>
-                      <p class="activity-desc">Explore St. Julian's nightlife at your own pace.</p>
-                    </div>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </article>
-
-          <article class="day-card" id="day-4">
-            <div class="day-marker">
-              <span class="day-name">Saturday</span>
-              <span class="day-number">4</span>
-              <span class="day-date">20th June</span>
-            </div>
-            <div class="day-content">
-              <div class="day-image">
-                <img src="assets/images/plane-flying.jpg" alt="Airplane flying up through a bright blue sky" width="800" height="500" loading="lazy">
-              </div>
-              <div class="day-details">
-                <span class="day-theme">Departure</span>
-                <h3>Saturday, 20th June</h3>
-                <p class="dress-code">
-                  <svg aria-hidden="true"><use href="#icon-shirt"></use></svg>
-                  <span><strong>Dress code:</strong> Comfortable travel wear</span>
-                </p>
-                <ul class="activity-list">
-                  <li class="activity-item">
-                    <span class="activity-time">Morning</span>
-                    <div class="activity-body">
-                      <div class="activity-title">Final Group Breakfast</div>
-                      <p class="activity-desc">Final group breakfast and check-out by 11:00.</p>
-                     
-                    </div>
-                  </li>
-                  <li class="activity-item">
-                    <span class="activity-time">Daytime</span>
-                    <div class="activity-body">
-                      <div class="activity-title">Airport Transfer</div>
-                      <p class="activity-desc">Private transfer back to Malta International Airport for return flights to Germany.</p>
-                      <a href="https://www.google.com/maps/search/?api=1&query=Malta+International+Airport" target="_blank" rel="noopener noreferrer" class="map-link">
-                        <svg aria-hidden="true"><use href="#icon-map-pin"></use></svg>
-                        <span>Airport Malta</span>
-                      </a>
-                    </div>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- Dining Section -->
-    <section class="section" id="dining" aria-labelledby="dining-title">
-      <div class="section-inner">
-        <header class="section-header">
-          <div class="section-icon" aria-hidden="true">
-            <svg aria-hidden="true"><use href="#icon-utensils"></use></svg>
-          </div>
-          <div>
-            <h2 class="section-title" id="dining-title">Dining & Dietary Notes</h2>
-            <p class="section-lead">Group meals, restaurants, and important dietary information.</p>
-          </div>
-        </header>
-
-        <div class="dining-note">
-          <h3>Important Dietary Note</h3>
-          <p><strong>All group meals are completely pork-free.</strong></p>
-          <p>If you have additional allergies, intolerances (gluten-free, dairy-free), or dietary restrictions, please let us know as soon as possible.</p>
-        </div>
-
-        <div class="restaurant-grid">
-          <article class="restaurant-card">
-            <img src="assets/images/asian-restaurant.jpg" alt="Colourful Asian fusion dishes at Kuya Asian Pub" width="800" height="500" loading="lazy">
-            <div class="restaurant-info">
-              <p class="restaurant-occasion">Wednesday Kickoff Dinner</p>
-              <h3 class="restaurant-name">Kuya Asian Restaurant</h3>
-              <p class="restaurant-cuisine">Thai & Japanese street food</p>
-              <a href="https://www.google.com/maps/search/?api=1&query=Kuya+Asian+Pub+St+Julian's+Malta" target="_blank" rel="noopener noreferrer" class="map-link">
-                <svg aria-hidden="true"><use href="#icon-map-pin"></use></svg>
-                <span>View Kuya Asian Restaurant on Google Maps</span>
-              </a>
-            </div>
-          </article>
-          <article class="restaurant-card">
-            <img src="assets/images/italian-restaurant.jpg" alt="Sunny Portomaso Marina in St. Julian's, home of The Avenue" width="800" height="500" loading="lazy">
-            <div class="restaurant-info">
-              <p class="restaurant-occasion">Thursday Team Dinner</p>
-              <h3 class="restaurant-name">The Avenue Restaurant</h3>
-              <p class="restaurant-cuisine">Italian feast</p>
-              <a href="https://www.google.com/maps/search/?api=1&query=The+Avenue+Restaurant+Portomaso+Malta" target="_blank" rel="noopener noreferrer" class="map-link">
-                <svg aria-hidden="true"><use href="#icon-map-pin"></use></svg>
-                <span>View The Avenue Restaurant on Google Maps</span>
-              </a>
-            </div>
-          </article>
-          <article class="restaurant-card">
-            <img src="assets/images/fornelli-restaurant.jpg" alt="Full buffet breakfast spread at Fornelli restaurant" width="800" height="500" loading="lazy">
-            <div class="restaurant-info">
-              <p class="restaurant-occasion">Breakfast</p>
-              <h3 class="restaurant-name">Fornelli Restaurant</h3>
-              <p class="restaurant-cuisine">Full buffet breakfast</p>
-              <a href="https://maps.app.goo.gl/FrXGrpGhkRNpsf7z9" target="_blank" rel="noopener noreferrer" class="map-link">
-                <svg aria-hidden="true"><use href="#icon-map-pin"></use></svg>
-                <span>View Fornelli Restaurant on Google Maps</span>
-              </a>
-            </div>
-          </article>
         </div>
       </div>
     </section>
@@ -568,6 +367,276 @@
         </div>
       </div>
     </section>
+
+    <!-- Itinerary Section -->
+    <section class="section itinerary" id="itinerary" aria-labelledby="itinerary-title">
+      <div class="section-inner">
+        <header class="section-header">
+          <div class="section-icon" aria-hidden="true">
+            <svg aria-hidden="true"><use href="#icon-calendar"></use></svg>
+          </div>
+          <div>
+            <h2 class="section-title" id="itinerary-title">Our Planning</h2>
+            <p class="section-lead">Four days of strategy, sun, and team bonding.</p>
+          </div>
+        </header>
+        <div class="timeline">
+          <article class="day-card" id="day-1">
+            <div class="day-marker">
+              <span class="day-name">Wednesday</span>
+              <span class="day-number">1</span>
+              <span class="day-date">17th June</span>
+            </div>
+            <div class="day-content">
+              <div class="day-image">
+                <img src="assets/images/arrivals-hall.jpg" alt="Airport arrivals hallway with travelers" width="800" height="500" loading="lazy">
+              </div>
+              <div class="day-details">
+                <span class="day-theme">Arrival & Welcome Night</span>
+                <h3>Wednesday, 17th June</h3>
+                <p class="dress-code">
+                  <svg aria-hidden="true"><use href="#icon-shirt"></use></svg>
+                  <span><strong>Dress code:</strong> Casual / Relaxed</span>
+                </p>
+                <ul class="activity-list">
+                  <li class="activity-item">
+                    <span class="activity-time">Daytime</span>
+                    <div class="activity-body">
+                      <div class="activity-title">Arrivals & Check-in</div>
+                      <p class="activity-desc">Arrivals, check-in, and settling into the hotel.</p>
+                      <a href="https://www.google.com/maps/place/be.HOTEL,+St+Julian's,+Malta/@35.9247668,14.4875549,17z" target="_blank" rel="noopener noreferrer" class="map-link">
+                        <svg aria-hidden="true"><use href="#icon-map-pin"></use></svg>
+                        <span>be.Hotel St. Julian's</span>
+                      </a>
+                    </div>
+                  </li>
+                  <li class="activity-item">
+                    <span class="activity-time">20:30</span>
+                    <div class="activity-body">
+                      <div class="activity-title">Kickoff Dinner</div>
+                      <p class="activity-desc">Kuya Asian Restaurant - Thai & Japanese street food, just a 2-minute walk from the hotel.</p>
+                      <a href="https://www.google.com/maps/place/Kuya+Asian+Pub,+St+Julian's,+Malta/@35.9201774,14.4905382,17z" target="_blank" rel="noopener noreferrer" class="map-link">
+                        <svg aria-hidden="true"><use href="#icon-map-pin"></use></svg>
+                        <span>Kuya Asian Restaurant</span>
+                      </a>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </article>
+
+          <article class="day-card" id="day-2">
+            <div class="day-marker">
+              <span class="day-name">Thursday</span>
+              <span class="day-number">2</span>
+              <span class="day-date">18th June</span>
+            </div>
+            <div class="day-content">
+              <div class="day-image">
+                <img src="assets/images/malta-sunny.jpg" alt="Sunny view of Valletta, Malta" width="800" height="500" loading="lazy">
+              </div>
+              <div class="day-details">
+                <span class="day-theme">Workshop & Strategy Day</span>
+                <h3>Thursday, 18th June</h3>
+                <p class="dress-code">
+                  <svg aria-hidden="true"><use href="#icon-shirt"></use></svg>
+                  <span><strong>Dress code:</strong> Business Casual for meeting; Smart Casual for dinner</span>
+                </p>
+                <ul class="activity-list">
+                  <li class="activity-item">
+                    <span class="activity-time">Morning</span>
+                    <div class="activity-body">
+                      <div class="activity-title">Buffet Breakfast</div>
+                      <p class="activity-desc">Full buffet breakfast at Fornelli restaurant.</p>
+                      <a href="https://maps.app.goo.gl/FrXGrpGhkRNpsf7z9" target="_blank" rel="noopener noreferrer" class="map-link">
+                        <svg aria-hidden="true"><use href="#icon-map-pin"></use></svg>
+                        <span>Fornelli Restaurant</span>
+                      </a>
+                    </div>
+                  </li>
+                  <li class="activity-item">
+                    <span class="activity-time">12:00 - 17:00</span>
+                    <div class="activity-body">
+                      <div class="activity-title">Noor Vision Team Workshop</div>
+                      <p class="activity-desc">Private conference space at Hyatt Regency Malta, St. George’s Bay, St. Julian’s, STJ 3311, Malta. About an 8-minute walk from the hotel.</p>
+                      <a href="https://www.google.com/maps/place/Hyatt+Regency+Malta,+St+Julian's,+Malta/@35.9239595,14.4874647,17z" target="_blank" rel="noopener noreferrer" class="map-link">
+                        <svg aria-hidden="true"><use href="#icon-map-pin"></use></svg>
+                        <span>Hyatt Regency Malta</span>
+                      </a>
+                    </div>
+                  </li>
+                  <li class="activity-item">
+                    <span class="activity-time">20:00</span>
+                    <div class="activity-body">
+                      <div class="activity-title">Team Dinner</div>
+                      <p class="activity-desc">The Avenue Restaurant - Italian feast in the Portomaso marina area.</p>
+                      <a href="https://www.google.com/maps/place/The+Avenue+Restaurant,+One+Portomaso,+St+Julian's,+Malta/@35.9202521,14.4924569,17z" target="_blank" rel="noopener noreferrer" class="map-link">
+                        <svg aria-hidden="true"><use href="#icon-map-pin"></use></svg>
+                        <span>The Avenue Restaurant</span>
+                      </a>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </article>
+
+          <article class="day-card" id="day-3">
+            <div class="day-marker">
+              <span class="day-name">Friday</span>
+              <span class="day-number">3</span>
+              <span class="day-date">19th June</span>
+            </div>
+            <div class="day-content">
+              <div class="day-image">
+                <img src="assets/images/catamaran-water.jpg" alt="White catamaran docked on calm water" width="800" height="500" loading="lazy">
+              </div>
+              <div class="day-details">
+                <span class="day-theme">Sun, Sea & Sailing</span>
+                <h3>Friday, 19th June</h3>
+                <p class="dress-code">
+                  <svg aria-hidden="true"><use href="#icon-shirt"></use></svg>
+                  <span><strong>Dress code:</strong> Swimwear, shorts, t-shirts, sun hat, sunscreen!</span>
+                </p>
+                <ul class="activity-list">
+                  <li class="activity-item">
+                    <span class="activity-time">Morning</span>
+                    <div class="activity-body">
+                      <div class="activity-title">Hotel Breakfast</div>
+                      <p class="activity-desc">Breakfast at the hotel before we set sail.</p>
+                      <a href="https://www.google.com/maps/place/be.HOTEL,+St+Julian's,+Malta/@35.9247668,14.4875549,17z" target="_blank" rel="noopener noreferrer" class="map-link">
+                        <svg aria-hidden="true"><use href="#icon-map-pin"></use></svg>
+                        <span>be.Hotel St. Julian's</span>
+                      </a>
+                    </div>
+                  </li>
+                  <li class="activity-item">
+                    <span class="activity-time">Daytime</span>
+                    <div class="activity-body">
+                      <div class="activity-title">Private Catamaran Charter</div>
+                      <p class="activity-desc">Private yacht via Sail Malta! Blue Lagoon, swimming, snorkeling. Premium BBQ lunch (steak & fish) + open bar. We meet at Marina Di Valletta, Triq San Maison, Pietà, Malta - Ubers are needed, it’s about 5 km away.</p>
+                      <a href="https://maps.app.goo.gl/wNcFykvkcRwYCPru5" target="_blank" rel="noopener noreferrer" class="map-link">
+                        <svg aria-hidden="true"><use href="#icon-map-pin"></use></svg>
+                        <span>Marina Di Valletta</span>
+                      </a>
+                    </div>
+                  </li>
+                  <li class="activity-item">
+                    <span class="activity-time">Evening</span>
+                    <div class="activity-body">
+                      <div class="activity-title">Free Evening</div>
+                      <p class="activity-desc">Explore St. Julian's nightlife at your own pace.</p>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </article>
+
+          <article class="day-card" id="day-4">
+            <div class="day-marker">
+              <span class="day-name">Saturday</span>
+              <span class="day-number">4</span>
+              <span class="day-date">20th June</span>
+            </div>
+            <div class="day-content">
+              <div class="day-image">
+                <img src="assets/images/plane-flying.jpg" alt="Airplane flying up through a bright blue sky" width="800" height="500" loading="lazy">
+              </div>
+              <div class="day-details">
+                <span class="day-theme">Departure</span>
+                <h3>Saturday, 20th June</h3>
+                <p class="dress-code">
+                  <svg aria-hidden="true"><use href="#icon-shirt"></use></svg>
+                  <span><strong>Dress code:</strong> Comfortable travel wear</span>
+                </p>
+                <ul class="activity-list">
+                  <li class="activity-item">
+                    <span class="activity-time">Morning</span>
+                    <div class="activity-body">
+                      <div class="activity-title">Final Group Breakfast</div>
+                      <p class="activity-desc">Final group breakfast and check-out by 11:00.</p>
+                     
+                    </div>
+                  </li>
+                  <li class="activity-item">
+                    <span class="activity-time">Daytime</span>
+                    <div class="activity-body">
+                      <div class="activity-title">Airport Transfer</div>
+                      <p class="activity-desc">Private transfer back to Malta International Airport for return flights to Germany.</p>
+                      <a href="https://www.google.com/maps/place/Malta+International+Airport/@35.8491987,14.4953109,17z" target="_blank" rel="noopener noreferrer" class="map-link">
+                        <svg aria-hidden="true"><use href="#icon-map-pin"></use></svg>
+                        <span>Malta International Airport</span>
+                      </a>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Dining Section -->
+    <section class="section" id="dining" aria-labelledby="dining-title">
+      <div class="section-inner">
+        <header class="section-header">
+          <div class="section-icon" aria-hidden="true">
+            <svg aria-hidden="true"><use href="#icon-utensils"></use></svg>
+          </div>
+          <div>
+            <h2 class="section-title" id="dining-title">Dining & Dietary Notes</h2>
+            <p class="section-lead">Group meals, restaurants, and important dietary information.</p>
+          </div>
+        </header>
+
+        <div class="dining-note">
+          <h3>Important Dietary Note</h3>
+          <p><strong>All group meals are completely pork-free.</strong></p>
+          <p>If you have additional allergies, intolerances (gluten-free, dairy-free), or dietary restrictions, please let us know as soon as possible.</p>
+        </div>
+
+        <div class="restaurant-grid">
+          <article class="restaurant-card">
+            <div class="restaurant-info">
+              <p class="restaurant-occasion">Wednesday Kickoff Dinner</p>
+              <h3 class="restaurant-name">Kuya Asian Restaurant</h3>
+              <p class="restaurant-cuisine">Thai & Japanese street food</p>
+              <a href="https://www.google.com/maps/place/Kuya+Asian+Pub,+St+Julian's,+Malta/@35.9201774,14.4905382,17z" target="_blank" rel="noopener noreferrer" class="map-link">
+                <svg aria-hidden="true"><use href="#icon-map-pin"></use></svg>
+                <span>Kuya Asian Restaurant</span>
+              </a>
+            </div>
+          </article>
+          <article class="restaurant-card">
+            <div class="restaurant-info">
+              <p class="restaurant-occasion">Thursday Team Dinner</p>
+              <h3 class="restaurant-name">The Avenue Restaurant</h3>
+              <p class="restaurant-cuisine">Italian feast</p>
+              <a href="https://www.google.com/maps/place/The+Avenue+Restaurant,+One+Portomaso,+St+Julian's,+Malta/@35.9202521,14.4924569,17z" target="_blank" rel="noopener noreferrer" class="map-link">
+                <svg aria-hidden="true"><use href="#icon-map-pin"></use></svg>
+                <span>The Avenue Restaurant</span>
+              </a>
+            </div>
+          </article>
+          <article class="restaurant-card">
+            <div class="restaurant-info">
+              <p class="restaurant-occasion">Breakfast</p>
+              <h3 class="restaurant-name">Fornelli Restaurant</h3>
+              <p class="restaurant-cuisine">Full buffet breakfast</p>
+              <a href="https://maps.app.goo.gl/FrXGrpGhkRNpsf7z9" target="_blank" rel="noopener noreferrer" class="map-link">
+                <svg aria-hidden="true"><use href="#icon-map-pin"></use></svg>
+                <span>Fornelli Restaurant</span>
+              </a>
+            </div>
+          </article>
+        </div>
+
+      </div>
+    </section>
+
   </main>
 
   <!-- Footer -->

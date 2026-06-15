@@ -50,45 +50,94 @@
   letter-spacing: -0.02em;
 }
 
-.header-controls {
+.header-start,
+.header-end {
   display: flex;
   align-items: center;
   gap: $space-md;
-  margin-left: auto;
 }
 
 .lang-switch {
   display: flex;
   align-items: center;
   gap: $space-xs;
-  font-size: 0.875rem;
+  font-size: 0.85rem;
   font-weight: 600;
+  line-height: 1;
 
   a, span {
     display: inline-flex;
     align-items: center;
     justify-content: center;
+    gap: $space-xs;
     min-width: 2rem;
     height: 2rem;
     padding: 0 $space-sm;
     border-radius: 8px;
   }
 
+  .lang-flag {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 14px;
+    border-radius: 2px;
+    overflow: hidden;
+    flex-shrink: 0;
+
+    svg {
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+  }
+
   a {
     color: rgba($nv-off-white, 0.75);
     background: transparent;
-    transition: background $transition-fast, color $transition-fast;
+    transition: background $transition-fast, transform $transition-fast;
 
     &:hover, &:focus {
-      color: $color-accent;
-      background: rgba(255, 255, 255, 0.1);
+      color: $nv-off-white;
+      background: rgba(255, 255, 255, 0.12);
+      transform: scale(1.1);
       text-decoration: none;
     }
   }
 
   .lang-current {
-    color: $color-accent;
+    color: $nv-off-white;
     background: rgba($color-accent, 0.15);
+    box-shadow: inset 0 0 0 1px rgba($color-accent, 0.35);
+  }
+}
+
+.header-search {
+  width: 180px;
+  height: 2.5rem;
+  padding: $space-sm $space-md;
+  background: rgba($nv-off-white, 0.1);
+  border: 1px solid rgba($nv-off-white, 0.2);
+  border-radius: 8px;
+  color: $nv-off-white;
+  font-size: 0.9rem;
+  transition: background $transition-fast, border-color $transition-fast, width $transition-fast;
+
+  &::placeholder {
+    color: rgba($nv-off-white, 0.6);
+  }
+
+  &:hover {
+    background: rgba($nv-off-white, 0.14);
+    border-color: rgba($nv-off-white, 0.35);
+  }
+
+  &:focus {
+    outline: none;
+    background: rgba($nv-off-white, 0.18);
+    border-color: $color-accent;
+    width: 220px;
   }
 }
 

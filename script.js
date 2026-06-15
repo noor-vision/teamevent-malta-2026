@@ -81,7 +81,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   function initActiveNav() {
-    const sections = ['overview', 'logistics', 'itinerary', 'dining', 'packing']
+    const sections = ['overview', 'logistics', 'packing', 'itinerary', 'dining']
       .map(id => document.getElementById(id))
       .filter(Boolean);
     const navLinks = document.querySelectorAll('.nav-link');
@@ -221,6 +221,20 @@ document.addEventListener('DOMContentLoaded', () => {
       ease: 'power3.out'
     });
 
+    // Important location cards stagger reveal
+    gsap.from('.location-card', {
+      scrollTrigger: {
+        trigger: '.location-grid',
+        start: 'top 80%',
+        toggleActions: 'play none none none'
+      },
+      y: 40,
+      opacity: 0,
+      stagger: 0.15,
+      duration: 0.8,
+      ease: 'power3.out'
+    });
+
     // Packing items stagger reveal
     gsap.from('.packing-item', {
       scrollTrigger: {
@@ -249,7 +263,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // Clickable element hover micro-interactions (GSAP)
-    const clickables = document.querySelectorAll('.btn, .nav-link, .map-link, .btn-print, .menu-toggle, .logo-link');
+    const clickables = document.querySelectorAll('.btn, .nav-link, .map-link, .btn-print, .menu-toggle, .logo-link, .header-search');
     clickables.forEach(el => {
       el.addEventListener('mouseenter', () => {
         gsap.to(el, { y: -2, duration: 0.2, ease: 'power2.out' });
@@ -264,9 +278,38 @@ document.addEventListener('DOMContentLoaded', () => {
   // Initialize
   // ============================================================
 
+  // Site search (client-side find)
+  function initSiteSearch() {
+    const searchInput = document.getElementById('site-search');
+    if (!searchInput || typeof window.find !== 'function') return;
+
+    searchInput.addEventListener('keydown', (e) => {
+      if (e.key !== 'Enter') return;
+      const term = searchInput.value.trim();
+      if (!term) return;
+
+      const found = window.find(term, false, false, true, false, false, false);
+      if (found) {
+        const nav = document.getElementById('main-nav');
+        const toggle = document.getElementById('menu-toggle');
+        if (nav && nav.classList.contains('open')) {
+          nav.classList.remove('open');
+          if (toggle) toggle.setAttribute('aria-expanded', 'false');
+
+          if (prefersReducedMotion) {
+            gsap.set(nav, { yPercent: -150, autoAlpha: 0 });
+          } else {
+            gsap.to(nav, { yPercent: -150, autoAlpha: 0, duration: 0.25, ease: 'power3.in' });
+          }
+        }
+      }
+    });
+  }
+
   initMobileMenu();
   initSmoothScroll();
   initActiveNav();
   initPrintButton();
+  initSiteSearch();
   initAnimations();
 });
